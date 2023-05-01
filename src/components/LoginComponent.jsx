@@ -17,20 +17,27 @@ export const LoginComponent = () => {
   return (
     <div className='login-wrapper'>
       <img src={LinkedinLogo} alt="Linkedin Logo" className='linkedinLogo' />
-      {/* <h1>LoginComponent</h1>
-      <div className='auth-inputs'>
-        <input 
-          onChange={(event) => setCredentials({ ...credentials, email: event.target.value })}
-          className='common-input'
-          placeholder="Enter your email here..."
-        />
-         <input 
-          onChange={(event) => setCredentials({ ...credentials, password: event.target.value })}
-          className='common-input'
-          placeholder="Enter your password here..."
-        />
+      <div className="inner-wrapper">
+        <h1 className="heading">Sign in</h1>
+        <p className="sub-heading">Stay updated on your professional world.</p>
+      
+        <div className='auth-inputs'>
+          <input 
+            onChange={(event) => setCredentials({ ...credentials, email: event.target.value })}
+            type="email"
+            className="common-input"
+            placeholder="Enter or Phone"
+          />
+          <input 
+            onChange={(event) => setCredentials({ ...credentials, password: event.target.value })}
+            type="password"
+            className="common-input"
+            placeholder="Password"
+          />
+        </div>
+        <button onClick={login} className='login-btn'>Sign in</button>
       </div>
-      <button onClick={login} className='login-btn'>Login to linkedin</button> */}
+      <hr className="hr-text" data-content="OR" />
     </div>
   )
 }
