@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { LoginAPI, RegisterAPI } from '../api/AuthAPI'
+import LinkedinLogo from '../assets/linkedinLogo.png';
 import '../Sass/LoginComponent.scss';
 
 export const LoginComponent = () => {
@@ -15,7 +16,8 @@ export const LoginComponent = () => {
 
   return (
     <div className='login-wrapper'>
-      <h1>LoginComponent</h1>
+      <img src={LinkedinLogo} alt="Linkedin Logo" className='linkedinLogo' />
+      {/* <h1>LoginComponent</h1>
       <div className='auth-inputs'>
         <input 
           onChange={(event) => setCredentials({ ...credentials, email: event.target.value })}
@@ -28,7 +30,7 @@ export const LoginComponent = () => {
           placeholder="Enter your password here..."
         />
       </div>
-      <button onClick={login} className='login-btn'>Login to linkedin</button>
+      <button onClick={login} className='login-btn'>Login to linkedin</button> */}
     </div>
   )
 }
